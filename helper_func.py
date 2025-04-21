@@ -13,7 +13,6 @@ from shortzy import Shortzy
 from database.database import *
 
 
-
 async def is_subscribed1(filter, client, update):
     if not FORCE_SUB_CHANNEL1:
         return True
