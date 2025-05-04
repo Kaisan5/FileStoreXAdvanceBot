@@ -24,6 +24,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 #--------------------------------------------
 START_PIC = os.environ.get("START_PIC", "")
 FORCE_PIC = os.environ.get("FORCE_PIC", "")
+TOKEN = True if os.environ.get('TOKEN', "True") == "True" else False  #For Enable Token 
 
 #--------------------------------------------
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "linkshortify.com")
