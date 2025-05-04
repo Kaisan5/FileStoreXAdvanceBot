@@ -75,7 +75,20 @@ async def start_command(client: Client, message: Message):
                     protect_content=False,
                     quote=True
                 )
-
+        await message.reply_photo(
+            photo=VERIFY_PIC,
+            caption=VERIFY_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None if not message.from_user.username else '@' + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id
+            ),
+            reply_markup=reply_markup,
+            message_effect_id=5104841245755180586)  # 🔥
+        
+        return
+        
     # Handle normal message flow
     text = message.text
     if len(text) > 7:
